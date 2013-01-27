@@ -7,6 +7,7 @@ class MoviesController < ApplicationController
 
   def show
 
+    #debugger
     #debug example
     #raise params.inspect
 

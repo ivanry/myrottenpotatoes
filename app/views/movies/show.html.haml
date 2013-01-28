@@ -14,8 +14,12 @@
 
 %p#description= @movie.description
 
-= link_to 'Back to movie list', movies_path
-
 -#debug example
 =# @movie.inspect
 =# debug(@movie)
+
+= link_to 'Edit info', edit_movie_path(@movie)
+= link_to 'Back to movie list', movies_path
+-# This Delete link will not really be a link, but a form:
+=# link_to 'Delete', movie_path(@movie), :method => :delete
+= button_to 'Delete', movie_path(@movie), :method => :delete, :confirm => 'Are you sure?'

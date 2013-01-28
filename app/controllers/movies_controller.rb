@@ -21,8 +21,10 @@ class MoviesController < ApplicationController
   end
 
   def create
-    raise params.inspect
-
-  end
+    #raise params.inspect
+    @movie = Movie.create!(params[:movie])
+    flash[:notice] = "#{@movie.title} was successfully created."
+    redirect_to movies_path
+end
 
 end

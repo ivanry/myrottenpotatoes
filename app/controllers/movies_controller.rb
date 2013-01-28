@@ -16,5 +16,13 @@ class MoviesController < ApplicationController
                             # will render app/views/movies/show.html.haml by default
   end
 
+  def new
+    # default: render 'new' template
+  end
+
+  def create
+    raise params.inspect
+
+  end
 
 end
